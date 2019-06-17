@@ -52,10 +52,10 @@ player.stop();   //停止播放
 player.release() //可以釋放播放器佔用的資源，若確定不用再播放最好是使用這個方法，才會不導致太多音訊同時播放而crash
 
 ### Thread
-第二、三模式中，剛按鈕按下去後，另啟一個Thread來播放音樂，而主執行敘將button設定為setEnabled(false)，讓程式不會狂按按鈕而音樂重複播放而crash，另啟的Thread播放的音樂結束後，才重啟Button
+第二、三模式中，剛按鈕按下去後，另啟一個Thread來播放音樂，而主執行敘將button設定為setEnabled(false)，讓程式不會狂按按鈕而音樂重複播放而crash，另啟的Thread播放的音樂結束後，才重啟Button。
 
 ### Button setBackgroundResource
-第三個模式中按下按鈕後(三首兒歌)，可更改image的背景色，提醒使用者此兒歌現在可進行播放或是挑戰模式
+第三個模式中按下按鈕後(三首兒歌)，可更改image的背景色，提醒使用者此兒歌現在可進行播放或是挑戰模式。
 
 ### Ripple
 七大音階按下去後的所產生的特效，讓使用者更明確的看出自己點的音符。
@@ -63,5 +63,8 @@ player.release() //可以釋放播放器佔用的資源，若確定不用再播�
 ### ProgressBar
 在第二模式中，使用者可明確知道自己按到第幾個音節。
 
-### 圖片繪製
-使用了小畫家3D來達成button image去背的功能
+### Image Manipulation
+使用了小畫家3D來達成button image去背的功能。
+
+
+## Contribution
