@@ -8,4 +8,9 @@ Once upon a time, there was a pokemon named Shuckle. He believed that he was bor
 ## Description
 Bellsprout taught Shuckle 3 methods to improve his singing skills. "Practice makes perfect." By keep reviewing these tips, Shuckle wiil sure realize his dream.
 
-### First
+
+![image](https://github.com/percy0525/Shuckle-master/blob/master/ReadPIC/Main.png)
+### First -> Pitch
+Pitch is a perceptual property of sounds that allows their ordering on a frequency-related scale. 
+![image](https://github.com/percy0525/Shuckle-master/blob/master/ReadPIC/Single0.png)
+    
