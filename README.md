@@ -12,7 +12,7 @@ Bellsprout taught Shuckle 3 methods to improve his singing skills.
 
 "Practice makes perfect." 
 
-By keep reviewing these tips, Shuckle wiil sure realize his dream.
+By keep reviewing these tips, Shuckle will surely realize his dream.
 
 
 ![image](https://github.com/percy0525/Shuckle-master/blob/master/ReadPIC/Main.png)
