@@ -8,8 +8,6 @@ One lovely morning in the forest, Shuckle met Bellsprout, a famous vocal with se
 "The distance between dreams and reality is called discipline."
 
 
-
-
 ## Description
 Bellsprout taught Shuckle 3 methods to improve his singing skills. 
 
@@ -44,8 +42,6 @@ Now it's time to see what you've got!
 ![image](https://github.com/percy0525/Shuckle-master/blob/master/ReadPIC/Triple2.png)
 
 
-
-
 ## Skills and Technologies
 ### mediaplayer
 可播放音訊檔，所以將七大音階
@@ -69,8 +65,6 @@ player.release() //可以釋放播放器佔用的資源，若確定不用再播�
 
 ### Image Manipulation
 使用了小畫家3D來達成button image去背的功能。
-
-
 
 
 ## Contribution
