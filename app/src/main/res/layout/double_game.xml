@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="RtlHardcoded">
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="32dp"
+        android:typeface="monospace" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="ButtonStyle">
+
+        <Button
+            android:id="@+id/Do"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:background="@drawable/ripdo"
+            android:onClick="soundOne"
+            android:shadowColor="#A8A8A8"
+            android:shadowRadius="4" />
+
+        <Button
+            android:id="@+id/Re"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/ripre"
+            android:onClick="soundOne" />
+
+        <Button
+            android:id="@+id/Mi"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/ripmi"
+            android:onClick="soundOne"
+            android:text="" />
+
+        <Button
+            android:id="@+id/Fa"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/ripfa"
+            android:onClick="soundOne"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView12"
+            app:srcCompat="@drawable/ball2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="ButtonStyle">
+
+        <com.marcok.stepprogressbar.StepProgressBar
+            android:id="@+id/stepProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            app:activeDotColor="@color/material_deep_teal_500"
+            app:activeDotIcon="@drawable/active_dot"
+            app:activeDotIndex="0"
+            app:cumulativeDots="false"
+            app:dotSize="20dp"
+            app:inactiveDotColor="@color/material_blue_grey_800"
+            app:inactiveDotIcon="@drawable/inactive_dot"
+            app:numberDots="4"
+            app:spacing="20dp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="103dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="ButtonStyle">
+
+        <Button
+            android:id="@+id/soundout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="8"
+            android:shadowDy="8"
+            android:shadowRadius="5"
+            android:text="Sound"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:onClick="gamereset"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="8"
+            android:shadowDy="8"
+            android:shadowRadius="2"
+            android:text="Reset"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12"
+        app:srcCompat="@drawable/ball2" />
+
+</LinearLayout>

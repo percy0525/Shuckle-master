@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:ignore="RtlHardcoded">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="ButtonStyle">
+
+
+        <TextView
+            android:id="@+id/info"
+            style="@style/AudioFileInfoOverlayText"
+
+            android:shadowColor="#ffffff"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Pokemon"
+            android:textSize="36sp" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="ButtonStyle">
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="101dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="ButtonStyle">
+
+
+        <Button
+            android:id="@+id/bee"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/ripbee"
+            android:onClick="mBee" />
+
+        <Button
+            android:id="@+id/star"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/ripstar"
+            android:onClick="mStar" />
+
+        <Button
+            android:id="@+id/sheep"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/ripsheep"
+            android:onClick="mSheep" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="ButtonStyle">
+        <Button
+            android:id="@+id/Do"
+
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/ripdo"
+            android:shadowColor="#A8A8A8"
+            android:shadowRadius="5"
+            android:onClick="soundOne"
+            android:text=""
+            />
+
+        <Button
+            android:id="@+id/Re"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="7dp"
+            android:onClick="soundOne"
+            android:background="@drawable/ripre"
+            />
+
+        <Button
+            android:id="@+id/Mi"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="7dp"
+            android:background="@drawable/ripmi"
+            android:onClick="soundOne"
+            android:text="" />
+
+        <Button
+            android:id="@+id/Fa"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="7dp"
+            android:background="@drawable/ripfa"
+            android:onClick="soundOne"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="ButtonStyle">
+        <Button
+            android:id="@+id/Sol"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="7dp"
+            android:onClick="soundOne"
+            android:background="@drawable/ripso"
+            />
+
+        <Button
+            android:id="@+id/La"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="7dp"
+            android:onClick="soundOne"
+            android:background="@drawable/ripla"
+            />
+
+        <Button
+            android:id="@+id/Si"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="7dp"
+            android:background="@drawable/ripsi"
+            android:onClick="soundOne"
+            android:text="" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="ButtonStyle">
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="103dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="ButtonStyle">
+
+
+        <Button
+            android:id="@+id/soundout"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAllCaps="false"
+            android:text="Play" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:onClick="gamereset"
+            android:textAllCaps="false"
+            android:text="Challenge" />
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
