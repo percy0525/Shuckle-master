@@ -1,3 +1,4 @@
+![image](https://github.com/percy0525/Shuckle-master/blob/master/ReadPIC/shuckle3.gif)
 # Shuckle
 ## Background
 Once upon a time, there was a pokemon named Shuckle. He believed that he was born to be a super star, and was dreaming of the day he would become an outstanding singer. One lovely morning in the forest, Shuckle met Bellsprout, a famous vocal with several Golden Melody Awards. It was absolutely a great opportunity for him to make his dream come true.
