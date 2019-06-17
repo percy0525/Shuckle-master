@@ -19,4 +19,4 @@ By keep reviewing these tips, Shuckle will surely realize his dream.
 ### First -> Pitch
 Pitch is a perceptual property of sounds that allows their ordering on a frequency-related scale. 
 ![image](https://github.com/percy0525/Shuckle-master/blob/master/ReadPIC/Single0.png)
-    
+In the beginning, you will hear one single voice in an octave including half step and whole tone. Try your best to figure out the pitch of this voice as many times as possible!
