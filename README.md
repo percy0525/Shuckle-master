@@ -69,7 +69,9 @@ player.release() //可以釋放播放器佔用的資源，若確定不用再播�
 
 ## Contribution
 Q38020176 安家駒 30%
+
 Q36071318 吳柏毅 35%
+
 Q38020176 劉宗晁 35%
 
 ![image](https://github.com/percy0525/Shuckle-master/blob/master/ReadPIC/shuckle4.gif)
