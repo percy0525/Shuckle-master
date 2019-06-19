@@ -7,7 +7,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:ignore="RtlHardcoded">
-
+    <Button
+        android:id="@+id/angry_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/tipshape"
+        android:gravity="center_horizontal"
+        android:onClick="hint1"
+        android:shadowColor="#F7F5F7"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="？"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

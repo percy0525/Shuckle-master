@@ -1,25 +1,67 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  MidiDriver - An Android Midi Driver.
+//
+//  Copyright (C) 2013	Bill Farmer
+//
+//  This program is free software; you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation; either version 3 of the License, or
+//  (at your option) any later version.
+//
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
+//
+//  Bill Farmer	 william j farmer [at] yahoo [dot] co [dot] uk.
+//
+///////////////////////////////////////////////////////////////////////////////
 
 package com.example.shuckle1;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.graphics.Color;
+import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.marcok.stepprogressbar.StepProgressBar;
 
 public class GameDouble extends Activity
         implements View.OnTouchListener, View.OnClickListener {
 
     private TextView text;
-    private Button btn_sound;
+    private Button btn_sound, bt1, bt2, bt3, bt4;
     public MediaPlayer player;
     public MediaPlayer correctPlayer;
     public StepProgressBar mStepProgressBar;
+    public Animation animation;
 
     String[] answer = {
             "1234",
@@ -53,6 +95,12 @@ public class GameDouble extends Activity
 
         text = findViewById(R.id.status);
         text.setText("LEVEL 1");
+
+        bt1 = findViewById(R.id.Do);
+        bt2 = findViewById(R.id.Re);
+        bt3 = findViewById(R.id.Mi);
+        bt4 = findViewById(R.id.Fa);
+
 
     }
 
@@ -214,24 +262,28 @@ public class GameDouble extends Activity
 
                 player = MediaPlayer.create(this, R.raw.doo);
                 player.start();
+                winkbtn(bt1);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
                 player.release();
                 player = MediaPlayer.create(this, R.raw.re);
                 player.start();
+                winkbtn(bt2);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
                 player.release();
                 player = MediaPlayer.create(this, R.raw.mi);
                 player.start();
+                winkbtn(bt3);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
                 player.release();
                 player = MediaPlayer.create(this, R.raw.fa);
                 player.start();
+                winkbtn(bt4);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -242,6 +294,7 @@ public class GameDouble extends Activity
             case 1:
                 player = MediaPlayer.create(this, R.raw.doo);
                 player.start();
+                winkbtn(bt1);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -249,6 +302,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.re);
                 player.start();
+                winkbtn(bt2);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -256,6 +310,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.mi);
                 player.start();
+                winkbtn(bt3);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -270,6 +325,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.fa);
                 player.start();
+                winkbtn(bt4);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -282,6 +338,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.re);
                 player.start();
+                winkbtn(bt2);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -289,6 +346,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.mi);
                 player.start();
+                winkbtn(bt3);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -296,6 +354,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.doo);
                 player.start();
+                winkbtn(bt1);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -303,6 +362,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.re);
                 player.start();
+                winkbtn(bt2);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -310,6 +370,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.fa);
                 player.start();
+                winkbtn(bt4);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -317,6 +378,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.mi);
                 player.start();
+                winkbtn(bt3);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -329,6 +391,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.fa);
                 player.start();
+                winkbtn(bt4);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -336,6 +399,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.doo);
                 player.start();
+                winkbtn(bt1);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -343,6 +407,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.re);
                 player.start();
+                winkbtn(bt2);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -350,6 +415,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.mi);
                 player.start();
+                winkbtn(bt3);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -357,6 +423,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.mi);
                 player.start();
+                winkbtn(bt1);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -364,6 +431,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.fa);
                 player.start();
+                winkbtn(bt4);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -371,6 +439,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.re);
                 player.start();
+                winkbtn(bt2);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -382,6 +451,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.fa);
                 player.start();
+                winkbtn(bt4);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -389,6 +459,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.re);
                 player.start();
+                winkbtn(bt2);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -396,6 +467,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.mi);
                 player.start();
+                winkbtn(bt3);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -403,6 +475,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.doo);
                 player.start();
+                winkbtn(bt1);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -410,6 +483,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.re);
                 player.start();
+                winkbtn(bt2);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -417,6 +491,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.mi);
                 player.start();
+                winkbtn(bt3);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -424,6 +499,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.re);
                 player.start();
+                winkbtn(bt2);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -431,6 +507,7 @@ public class GameDouble extends Activity
                 //
                 player = MediaPlayer.create(this, R.raw.fa);
                 player.start();
+                winkbtn(bt4);
                 mStepProgressBar.next();
                 Thread.sleep(1000);
                 player.stop();
@@ -439,6 +516,32 @@ public class GameDouble extends Activity
 
         }
         //btn_sound.setEnabled(true);
+    }
+
+    public void winkbtn(Button btn) {
+        animation = new AlphaAnimation(1, 0);
+        animation.setDuration(400);
+        animation.setInterpolator(new LinearInterpolator());
+        animation.setRepeatMode(Animation.REVERSE);
+        btn.startAnimation(animation);
+    }
+
+    public void hint1(View view) {
+        Button angryButton = (Button) findViewById(R.id.angry_btn);
+        angryButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Log.d("test","123");
+                AlertDialog.Builder myAlertBuilder = new AlertDialog.Builder(GameDouble.this);
+                myAlertBuilder.setTitle("音準練習");
+                myAlertBuilder.setMessage("下面4個方格各代表一個音，點擊Sound會聽到簡單旋律，記下此旋律並按下方格重演一遍，按錯可點Reset重來，成功可進入下一等級。\n小技巧：旋律播放結束前切勿提早開始點方格！");
+                myAlertBuilder.setPositiveButton("OK", new
+                        DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                            }
+                        });
+                myAlertBuilder.show();
+            }
+        });
     }
 
 

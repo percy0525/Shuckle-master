@@ -7,6 +7,24 @@
     android:orientation="vertical"
     tools:ignore="RtlHardcoded">
 
+    <Button
+        android:id="@+id/angry_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/tipshape"
+        android:gravity="center_horizontal"
+        android:onClick="hint1"
+        android:shadowColor="#F7F5F7"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="？"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
+
     <TextView
         android:id="@+id/status"
         android:layout_width="match_parent"
@@ -143,16 +161,5 @@
             android:textSize="36sp" />
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView12"
-        app:srcCompat="@drawable/ball2" />
 
 </LinearLayout>

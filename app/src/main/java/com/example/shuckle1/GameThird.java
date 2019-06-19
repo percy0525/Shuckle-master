@@ -36,8 +36,11 @@
 package com.example.shuckle1;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -422,6 +425,26 @@ public class GameThird extends Activity implements View.OnTouchListener
         }
         player.stop();
         player.release();
+    }
+
+    public void hint1(View view) {
+        Button angryButton = (Button) findViewById(R.id.angry_btn);
+        angryButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Log.d("test", "123");
+                AlertDialog.Builder myAlertBuilder = new AlertDialog.Builder(GameThird.this);
+                myAlertBuilder.setTitle("樂曲演奏");
+                myAlertBuilder.setMessage("方格表示一個8度。選擇喜歡的曲目，按Play播放一次，按Challenge用方格自己演奏一遍！\n" +
+                        "歌曲由左到右分別為：\n" +
+                        "小蜜蜂、小星星、小綿羊");
+                myAlertBuilder.setPositiveButton("OK", new
+                        DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                            }
+                        });
+                myAlertBuilder.show();
+            }
+        });
     }
 
 }

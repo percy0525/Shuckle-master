@@ -1,9 +1,11 @@
 package com.example.shuckle1;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -424,6 +426,25 @@ public class GameSingle extends AppCompatActivity {
                 break;
 
         }
+    }
+
+    public void hint1(View view) {
+        Button angryButton = (Button) findViewById(R.id.angry_btn);
+        angryButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Log.d("test","123");
+                AlertDialog.Builder myAlertBuilder = new AlertDialog.Builder(GameSingle.this);
+                myAlertBuilder.setTitle("音準練習");
+                myAlertBuilder.setMessage("點擊Play會聽到一鋼琴音，按下下方的琴鍵找出音高。" +
+                        "答對的話選Next來繼續挑戰，多試幾次掌握音感吧！");
+                myAlertBuilder.setPositiveButton("OK", new
+                        DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                            }
+                        });
+                myAlertBuilder.show();
+            }
+        });
     }
 
 
